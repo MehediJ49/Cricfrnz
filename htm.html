@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="htm.css">
+</head>
+<body>
+    <h3 class="heading"> Videos</h3>
+    <div class="container">
+        <div class="main-video">
+            <div class="video">
+                <video src="media/Aussie quicks’ frightening bouncer barrage.mp4" controls muted autoplay></video>
+                <h3 class="title"> 1.Assie quicks's frightening </h3>
+            </div>
+        </div>
+        <div class="video-list">
+            <div class="vid active">
+                <video src="media/AB de Villiers's 76 Runs Against Kolkata Knight Riders _ 10th Match _ Indian Pre.mp4" muted></video>
+                <h3 class="title"> 2.AB de Villiers's 76 Runs Against Kolkata Knight Riders </h3>
+            </div>
+            <div class="vid">
+                <video src="media/Biggest Hitters of the BBL_ Best of Chris Gayle.mp4" muted></video>
+                <h3 class="title"> 3.Biggest Hitters of the BBL: Best of Chris Gayle </h3>
+            </div>
+            <div class="vid">
+                <video src="media/Carey details strategy behind keeping up to the quicks _ Unplayable Podcast.mp4"muted></video>
+                <h3 class="title"> 4.Carey details strategy behind keeping up to the quicks </h3>
+            </div>
+            <div class="vid">
+                <video src="media/From the Vault_ Jayasuriya blasts SCG century.mp4" muted></video>
+                <h3 class="title"> 5.From the Vault: Jayasuriya blasts SCG century </h3>
+            </div>
+            <div class="vid">
+                <video src="media/From The Vault_ Lara's defiant ton at the SCG.mp4" muted></video>
+                <h3 class="title"> 6.From the Vault: Lara makes history with 226 in Adelaide </h3>
+            </div>
+           
+            <div class="vid">
+                <video src="media/Malinga Stars In Big Upset! _ England v Sri Lanka - Match Highlights _ ICC Crick.mp4" muted></video>
+                <h3 class="title"> 7.Malinga Stars In Big Upset! | England v Sri Lanka - Match Highlights </h3>
+            </div>
+            <div class="vid">
+                <video src="media/Tigers Win In Thriller! _ South Africa vs Bangladesh - Match Highlights _ ICC Cr.mp4" muted></video>
+                <h3 class="title"> 8.Tigers Win In Thriller! | South Africa vs Bangladesh </h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        let listVideo=document.querySelectorAll('.video-list .vid');
+        let mainVideo=document.querySelector('.main-video video');
+        let title= document.querySelector('.main-video .title');
+
+        listVideo.forEach(video=>{
+            video.onclick=()=>{
+                listVideo.forEach(vid=> vid.classList.remove('active'));
+                video.classList.add('active');
+                if(video.classList.contains('active')){
+                let src=video.children[0].getAttribute('src');
+                mainVideo.src=src;
+                let text=video.children[1].innerHTML;
+                title.innerHTML=text;
+
+                };
+
+            };
+        });
+    </script>
+</body>
+</html>

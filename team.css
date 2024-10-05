@@ -1,0 +1,29 @@
+
+*{
+ margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:white; 
+}
+.box
+{
+position:relative;
+min-width: 425px;
+background: #00bcd4;
+padding: 120px;
+box-shadow: 0 35px 50px white;
+}
+
+
+
+
+
+
